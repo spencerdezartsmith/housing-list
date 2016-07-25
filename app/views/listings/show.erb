@@ -1,0 +1,26 @@
+This will show the details of the specific listing
+<li>
+    <a href="/listings">Home</a>
+</li>
+  <li>
+      <a href="/users/<%= session[:user_id] %>">Profile</a>
+  </li>
+  <li>
+      <a href="/listings/new">Create a listing</a>
+  </li>
+  <li>
+      <a href="#">Get a sign up token</a>
+  </li>
+  <li>
+      <a href="/logout">Logout</a>
+  </li>
+
+<h1><%= @listing.title %></h1><br>
+
+<%= @listing.description %>
+
+There will also be a photo
+
+<p>$<%= @listing.price %></p>
+
+this will be a map!!!!
