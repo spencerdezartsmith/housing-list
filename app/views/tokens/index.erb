@@ -1,0 +1,15 @@
+<p>Juanita's Housing List is a resource for the LGBTQI community trying to remain in San Francisco.</p>
+<p>
+  If you know someone who would benefit from the resources offered on this site, click the 'generate token' button below. Please copy the token and provide it to your friend.
+</p>
+<p>
+  When the person registers for the site they will be required to enter the token.
+</p>
+
+<form action="/token/new" method="POST">
+	<input type="submit" value="Generate Token!">
+</form>
+
+<% if @token %>
+	<p><%= @token.code %></p>
+<% end %>

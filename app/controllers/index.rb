@@ -39,6 +39,11 @@ post '/listings' do
   end
 end
 
-post '/token' do
+get '/token' do
+  @logged_in_user = User.find(session[:user_id])
+  erb :'tokens/index'
+end
+
+post '/token/new' do
   'Hello World'
 end
