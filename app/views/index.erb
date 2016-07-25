@@ -5,5 +5,13 @@ This page will hold the login and register page
   <input type="text" name="email">
   Password:
   <input type="password" name="password"><br><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Login">
+</form><br>
+
+<%= @error %><br>
+
+<form action="/user/new" method='GET'>
+  Enter Code:
+  <input type="text" name="code"><br>
+  <input type="submit" value="Register">
 </form>

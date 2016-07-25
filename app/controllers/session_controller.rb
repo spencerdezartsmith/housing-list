@@ -13,3 +13,12 @@ get '/logout' do
   session[:user_id] = nil
   redirect '/'
 end
+
+get '/user/new' do
+  if token_check(params[:code])
+    erb :'users/new'
+  else
+    @error = "You need a registration code to sign up. Ask a friend!"
+    erb :index
+  end
+end
