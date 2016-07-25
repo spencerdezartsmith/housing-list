@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_one :listing, foreign_key: :manager_id
   has_many :responses, foreign_key: :author_id
   has_many :references, foreign_key: :receiver_id
+  has_many :tokens
 
   include BCrypt
 

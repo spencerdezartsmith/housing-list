@@ -45,5 +45,11 @@ get '/token' do
 end
 
 post '/token/new' do
-  'Hello World'
+  @token = Token.new(code: token_generator, generator_id: session[:user_id])
+  if @token.save
+    redirect '/token'
+  else
+    @error = 'Something went wrong. Please try again'
+    erb :'tokens/index'
+  end
 end
