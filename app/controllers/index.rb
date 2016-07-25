@@ -4,20 +4,22 @@ end
 
 get '/listings' do
   @listings = Listing.all
-  @user = User.find(session[:user_id])
+  @logged_in_user = User.find(session[:user_id])
   erb :'listings/index'
 end
 
 get '/listings/new' do
+  @logged_in_user = User.find(session[:user_id])
     erb :'listings/new'
 end
 
-get '/my-profile' do
-  @user = User.find(session[:user_id])
+get '/profile' do
+  @logged_in_user = User.find(session[:user_id])
   erb :'/users/show'
 end
 
 get '/users/:id' do
+  @logged_in_user = User.find(session[:user_id])
   @user = User.find(params[:id])
   erb :'/users/show'
 end
@@ -35,4 +37,8 @@ post '/listings' do
     @message = "Something went wrong. Try again"
     redirect '/listings/new'
   end
+end
+
+post '/token' do
+  'Hello World'
 end

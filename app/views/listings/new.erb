@@ -1,22 +1,3 @@
-<h1>Juanita's Housing List</h1>
-<ul>
-  <li>
-      <a href='/listings'>Home</a>
-  </li>
-    <li>
-        <a href="/users/<%= session[:user_id] %>">Profile</a>
-    </li>
-    <li>
-        <a href="/listings/new">Create a listing</a>
-    </li>
-    <li>
-        <a href="#">Get a sign up token</a>
-    </li>
-    <li>
-        <a href="/logout">Logout</a>
-    </li>
-</ul>
-
 <form action="/listings" method="POST">
   Title: <input type="text" name="title"><br>
   Location: <input type="text" name="location"><br>

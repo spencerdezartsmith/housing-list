@@ -1,29 +1,11 @@
 This is the users profile page
 
-<ul>
-  <li>
-      <a href="/listings">Home</a>
-  </li>
-    <li>
-        <a href="/my-profile">Profile</a>
-    </li>
-    <li>
-        <a href="/listings/new">Create a listing</a>
-    </li>
-    <li>
-        <a href="#">Get a sign up token</a>
-    </li>
-    <li>
-        <a href="/logout">Logout</a>
-    </li>
-</ul>
-
-<h1><%= @user.full_name  %></h1>
+<h1><%= @logged_in_user.full_name  %></h1>
 this is a users personal description
-<p><%= @user.description %></p>
+<p><%= @logged_in_user.description %></p>
 <!-- this will list the persons references with the reference author which will link back to their profile -->
 this is a list of references
-<% @user.references.each do |reference| %>
+<% @logged_in_user.references.each do |reference| %>
   <%= reference.reference %><br>
   <a href="/users/<%= reference.author.id %>"><%= reference.author.full_name %></a>
 <% end %>
