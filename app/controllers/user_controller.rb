@@ -1,12 +1,12 @@
 # get code and check if it exists. if so show registration form. if not redirect
-get '/user/new' do
-  @code = Token.find_by(code: params[:code]).code
-  if token_check(@code)
+get '/users/new' do
+  # @code = Token.find_by(code: params[:code]).code
+  # if token_check(params[:code])
     erb :'/users/new'
-  else
-    @error = "You need a registration code to sign up. Ask a friend!"
-    erb :index
-  end
+  # else
+    # @error = "You need a registration code to sign up. Ask a friend!"
+    # erb :index
+  # end
 end
 
 get '/profile' do
