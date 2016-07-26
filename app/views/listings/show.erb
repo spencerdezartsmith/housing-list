@@ -1,14 +1,15 @@
-This will show the details of the specific listing
+<div class="container">
 
 <h1><%= @listing.title %></h1><br>
 
 <%= @listing.description %>
 
-<%= image_tag @listing.image.url %>
 
 There will also be a photo
 
-<p>$<%= @listing.price %></p>
+<p>$<%= @listing.price %> per month</p>
+<a href="#" class="btn btn-info" role="button">Contact <%= @listing.manager.full_name %></a>
+</div>
 
 
 this will be a map!!!!

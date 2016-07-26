@@ -6,7 +6,11 @@ end
 
 get '/listings/new' do
   @logged_in_user = User.find(session[:user_id])
+  if request.xhr?
+    erb :'listings/_new_listing', layout: false
+  else
     erb :'listings/new'
+  end
 end
 
 get '/listings/:id' do

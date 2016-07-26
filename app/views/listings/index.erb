@@ -1,13 +1,11 @@
 <div class="container">
+  <br><h3>Listings</h3><br>
 
-<br>Listings<br>
-
-<% @listings.each do |listing| %>
-
-    <a href="/listings/<%= listing.id %>"><%= listing.title %></a><br>
-    $<%= listing.price %>
-    per month<br>
-    <% end %><br>
-
-<a href="/listings/new" class="btn btn-info" role="button">Create a listing</a>
+  <a href="/listings/new" class="btn btn-info" role="button">Create a listing</a><br><br>
+    <% @listings.each do |listing| %>
+    <div class="list-group">
+        <a href="/listings/<%= listing.id %>" class="list-group-item"><%= listing.title %>
+        $<%= listing.price %> per month</a>
+    </div>
+    <% end %>
 </div>
