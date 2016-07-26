@@ -21,7 +21,11 @@ end
 post '/listings' do
   @listing = Listing.new(title: params[:title], location: params[:location], price: params[:price].to_i, description: params[:description])
   if @listing.save
-    redirect '/listings'
+    if request.xhr?
+      erb :'listings/_listing', layout: false
+    else
+      redirect '/listings'
+    end
   else
     @message = "Something went wrong. Try again"
     redirect '/listings/new'
