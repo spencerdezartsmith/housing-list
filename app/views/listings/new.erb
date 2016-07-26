@@ -1,23 +1,4 @@
 <br>
 <div class="col-lg-offset-5 col-lg-2 text-center">
-    <form action="/listings" method="POST">
-        <fieldset class="form-group">
-            <label for="exampleInputFullName1">Title</label>
-            <input type="text" class="form-control" name="title">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleInputAddress1">Address</label>
-            <input type="text" class="form-control" name="address">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleInputPrice1">Price</label>
-            <input type="text" class="form-control" name="price">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleTextarea">Tell us about the place...</label>
-            <textarea class="form-control" name="description" rows="5"></textarea>
-        </fieldset>
-      
-        <button type="submit" class="btn btn-primary">List it!!</button>
-    </form>
+  <%= erb :'/listings/_new_listing' %>
 </div>
