@@ -1,11 +1,7 @@
 post '/login' do
-  p params
   @user = User.find_by(email: params[:email])
   if @user.authenticate(params[:password])
     session[:user_id] = @user.id
-    if current_user
-      p "HEYYYYYYYYYYY"
-    end
     redirect '/listings'
   else
     @error = 'Your email or password was incorrect. Please try again.'
@@ -18,8 +14,11 @@ get '/logout' do
   redirect '/'
 end
 
-post '/users' do
-  "hello world"
-  p params
-
+post '/users/:code' do
+  @user = User.new(full_name: params[:full_name], email: params[:email], password: params[:password], description: params[:description])
+  if @user.save
+    session[:user_id] = @user.id
+  else
+    @error = "Something went wrong. Please try again"
+  end
 end

@@ -6,6 +6,7 @@ helpers do
   end
 
   def token_check(code)
+    p code
     Token.find_by(code: code)
   end
 

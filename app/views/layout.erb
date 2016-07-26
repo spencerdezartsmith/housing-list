@@ -31,7 +31,7 @@ application.css is where you put your styles
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Juanita's Housing List</a>
+      <a class="navbar-brand" href="/listings">Juanita's Housing List</a>
       <!-- Header tabs -->
       <% if current_user %>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -44,9 +44,8 @@ application.css is where you put your styles
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/listings">Home</a></li>
+        <li><a href="/listings">Listings</a></li>
         <li><a href="/profile">Profile</a></li>
-        <li><a href="/listings/new">Create a listing</a></li>
         <li><a href="/token">Get a sign up token</a></li>
         <li><a href="/logout">Logout</a></li>
       </ul>

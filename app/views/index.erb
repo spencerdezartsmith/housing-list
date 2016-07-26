@@ -21,26 +21,11 @@
     </form><br>
     <form action="/users/new" method="GET">
       <div class="control-group">
-
-      <input type="text" class="code-field" value="" placeholder="access code" id="registration-field">
+				<%= @error %>
+      <input type="text" class="code-field" name="code" placeholder="access code" id="registration-field">
       <label class="login-field-icon fui-user" for="enter-code"></label>
       </div>
       <input type="submit" class="btn btn-primary btn-large btn-block" value='Enter registration code?'></a>
     </form>
 		</div>
 	</div>
-<!-- <form action="/login" method='POST'>
-  Email:
-  <input type="text" name="email">
-  Password:
-  <input type="password" name="password"><br><br>
-  <input type="submit" value="Login">
-</form><br>
-
-<%= @error %><br>
-
-<form action="/users/new" method='GET'>
-  Enter Code:
-  <input type="text" name="code"><br>
-  <input type="submit" value="Register">
-</form> -->

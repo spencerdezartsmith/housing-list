@@ -15,8 +15,8 @@ get '/listings/:id' do
 end
 
 post '/listings' do
-  listing = Listing.new(title: params[:title], location: params[:location], price: params[:price].to_i, description: params[:description])
-  if listing.save
+  @listing = Listing.new(title: params[:title], location: params[:location], price: params[:price].to_i, description: params[:description])
+  if @listing.save
     redirect '/listings'
   else
     @message = "Something went wrong. Try again"

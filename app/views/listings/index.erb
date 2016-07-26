@@ -1,10 +1,13 @@
-<br>Listings
+<div class="container">
+
+<br>Listings<br>
 
 <% @listings.each do |listing| %>
-<p>
-    <a href="/listings/<%= listing.id %>"><%= listing.title %></a>
-</p>
-<p>
+
+    <a href="/listings/<%= listing.id %>"><%= listing.title %></a><br>
     $<%= listing.price %>
-    per month
-    <% end %>
+    per month<br>
+    <% end %><br>
+
+<a href="/listings/new" class="btn btn-info" role="button">Create a listing</a>
+</div>
