@@ -1,7 +1,6 @@
 # get code and check if it exists. if so show registration form. if not redirect
 get '/users/new' do
   if token_check(params[:code])
-    token_check(params[:code]).delete
     erb :'/users/new'
   else
     @error = "You need a registration code to sign up. Ask a friend!"
