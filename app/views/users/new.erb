@@ -1,9 +1,8 @@
-<form action="/users" id="register-form">
+<form action="/users" id="register-form" method="POST">
   Full Name: <input type="text" name="full_name"><br>
   Email: <input type="text" name="email"><br>
   Password: <input type="text" name="password"><br>
-  Registration Code: <input type="text" name="code" value="<%= @code %>"><br>
-  <input type="submit">
+  Registration Code: <input type="text" name="code" value=""><br>
+  <input type="submit" value="Register">
 </form><br>
-
 <textarea rows="10" cols="50" name="description" form="register-form">Tell us about yourself...</textarea>
