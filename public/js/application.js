@@ -1,7 +1,23 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  console.log('ready')
+  showListingForm();
 });
+
+function showListingForm(){
+  $('a.btn.btn-info').on('click', function(event){
+    event.preventDefault();
+
+    $.ajax({
+      url: '/listings/new',
+      method: 'GET'
+    })
+    .done(function(form){
+      console.log('good job homie')
+      console.log(form)
+    })
+    .fail(function(){
+      console.log("Keep trying")
+    })
+  })
+
+}
