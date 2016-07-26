@@ -1,6 +1,35 @@
-This page will hold the login and register page
+<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Login</h1>
+			</div>
+    <form action="/login" method='POST'>
+			<div class="login-form">
+				<div class="control-group">
 
-<form action="/login" method='POST'>
+				<input type="text" class="login-field" name="email" placeholder="email" id="login-name">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field" name="password" placeholder="password" id="login-pass">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+				<input type="submit" class="btn btn-primary btn-large btn-block" value='Login'></a>
+      </div>
+    </form><br>
+    <form action="/users/new" method="GET">
+      <div class="control-group">
+
+      <input type="text" class="code-field" value="" placeholder="access code" id="registration-field">
+      <label class="login-field-icon fui-user" for="enter-code"></label>
+      </div>
+      <input type="submit" class="btn btn-primary btn-large btn-block" value='Enter registration code?'></a>
+    </form>
+		</div>
+	</div>
+<!-- <form action="/login" method='POST'>
   Email:
   <input type="text" name="email">
   Password:
@@ -14,4 +43,4 @@ This page will hold the login and register page
   Enter Code:
   <input type="text" name="code"><br>
   <input type="submit" value="Register">
-</form>
+</form> -->

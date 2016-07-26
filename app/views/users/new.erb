@@ -1,8 +1,22 @@
-<form action="/users" id="register-form" method="POST">
-  Full Name: <input type="text" name="full_name"><br>
-  Email: <input type="text" name="email"><br>
-  Password: <input type="text" name="password"><br>
-  Registration Code: <input type="text" name="code" value=""><br>
-  <input type="submit" value="Register">
-</form><br>
-<textarea rows="10" cols="50" name="description" form="register-form">Tell us about yourself...</textarea>
+<br>
+<div class="col-lg-offset-5 col-lg-2 text-center">
+  <form action="/users" method="POST">
+    <fieldset class="form-group">
+      <label for="exampleInputFullName1">Full name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="full_name" placeholder="Enter full name">
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+    </fieldset>
+    <fieldset class="form-group">
+      <label for="exampleTextarea">Tell us a little about yourself..</label>
+      <textarea class="form-control" id="exampleTextarea" name="description" rows="5"></textarea>
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
