@@ -1,5 +1,9 @@
 get '/messages/new/:id' do
-  @recipient = Listing.find(params[:id])
+  # @recipient = Listing.find(params[:id])
+  @recipient = Listing.find(params[:id]).manager
+  p @recipient
+  # p '*' * 80
+  # p @recipient.manager.full_name
 
   erb :'/messages/new'
 end

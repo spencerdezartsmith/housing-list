@@ -17,11 +17,17 @@ require 'logger'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
+require 'twilio-ruby'
+
 
 require 'erb'
 require 'faker'
 require 'bcrypt'
 require 'paperclip'
+#
+require 'dotenv'
+
+
 include Paperclip::Glue
 
 # Some helper constants for path-centric logic
@@ -37,6 +43,7 @@ configure do
   enable :sessions
   set :session_secret, ENV['SESSION_SECRET'] || 'this is a secret shhhhh'
 
+  Dotenv.load
   # Set the views to
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
