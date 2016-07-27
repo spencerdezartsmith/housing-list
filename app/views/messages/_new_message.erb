@@ -1,0 +1,17 @@
+<div class="col-lg-offset-5 col-lg-2 text-center2">
+<br>
+<form action="/messages" method="POST" display=>
+<fieldset class="form-group">
+  <label for="exampleInputRecipient1">Recipient</label>
+
+  <input type="text" class="form-control" name="recipient" value="<%= @recipient.manager.full_name %>">
+</fieldset>
+
+<fieldset class="form-group">
+  <label for="exampleTextarea">Message...</label>
+  <textarea class="form-control" name="body" rows="5"></textarea><br>
+  <button type="submit" class="btn btn-primary">Send</button>
+</fieldset>
+</form>
+
+</div>
