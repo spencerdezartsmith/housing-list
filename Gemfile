@@ -18,6 +18,7 @@ gem 'bcrypt'
 gem "paperclip", "~> 5.0.0"
 gem "dotenv"
 gem 'twilio-ruby'
+gem 'faker'
 
 group :test do
   gem 'shoulda-matchers'
@@ -28,5 +29,4 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
 end
