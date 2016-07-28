@@ -14,6 +14,7 @@ get '/listings/new' do
 end
 
 get '/listings/:id' do
+  @key = ENV['GOOGLE_API']
   @listing = Listing.find(params[:id])
   erb :'listings/show'
 end
