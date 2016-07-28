@@ -17,6 +17,12 @@
       <label for="exampleTextarea">Tell us a little about yourself..</label>
       <textarea class="form-control" id="exampleTextarea" name="description" rows="5"></textarea>
     </fieldset>
+    <h1>Upload Image</h1>
+
+        <form action="http://itp.nyu.edu/~rsm347/sinatra/file_upload/save_image" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload image">
+        </form>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
