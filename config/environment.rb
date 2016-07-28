@@ -1,11 +1,15 @@
+
 # Set up gems listed in the Gemfile.
 # See: http://gembundler.com/bundler_setup.html
 #      http://stackoverflow.com/questions/7243486/why-do-you-need-require-bundler-setup
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
+
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
+require 'dotenv'
+Dotenv.load
 require 'rubygems'
 
 require 'uri'
@@ -17,17 +21,11 @@ require 'logger'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
-require 'twilio-ruby'
-
 
 require 'erb'
 require 'faker'
 require 'bcrypt'
 require 'paperclip'
-#
-require 'dotenv'
-
-
 include Paperclip::Glue
 
 # Some helper constants for path-centric logic
@@ -43,7 +41,6 @@ configure do
   enable :sessions
   set :session_secret, ENV['SESSION_SECRET'] || 'this is a secret shhhhh'
 
-  Dotenv.load
   # Set the views to
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
