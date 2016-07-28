@@ -14,13 +14,12 @@ get '/listings/new' do
 end
 
 get '/listings/:id' do
-  @key = ENV['GOOGLE_API']
   @listing = Listing.find(params[:id])
   erb :'listings/show'
 end
 
 post '/listings' do
-  @listing = Listing.new(title: params[:title], location: params[:location], price: params[:price].to_i, description: params[:description])
+  @listing = Listing.new(title: params[:title], location: params[:location], price: params[:price].to_i, description: params[:description], manager_id: session[:user_id])
   if @listing.save
     if request.xhr?
       erb :'listings/_listing', layout: false

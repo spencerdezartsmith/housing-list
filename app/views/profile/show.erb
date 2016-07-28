@@ -1,11 +1,13 @@
-This is the users profile page
+<div class="container">
+
 
 <h1><%= @logged_in_user.full_name  %></h1>
 this is a users personal description<br><br>
 <p><%= @logged_in_user.description %></p><br>
 <!-- this will list the persons references with the reference author which will link back to their profile -->
-this is a list of references<br><br>
+<h3>References</h3><br>
 <% @logged_in_user.references.each do |reference| %>
   <%= reference.reference %><br>
   <a href="/users/<%= reference.author.id %>"><%= reference.author.full_name %></a><br>
 <% end %>
+</div>
