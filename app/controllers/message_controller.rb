@@ -27,7 +27,6 @@ post '/messages' do
 end
 
 post '/response' do
-  p params
   @sender = User.find_by(phone_number: params['From'])
   @message = Message.find_by(sender_id: @sender.id).update_attributes(response: params['Body'])
   redirect '/messages'
