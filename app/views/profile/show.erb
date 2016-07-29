@@ -1,11 +1,50 @@
 <div class="container">
-  <h1><%= @logged_in_user.full_name  %></h1>
-  this is a users personal description<br><br>
-  <p><%= @logged_in_user.description %></p><br>
-  <!-- this will list the persons references with the reference author which will link back to their profile -->
-  <h3>References</h3><br>
-  <% @logged_in_user.references.each do |reference| %>
-    <%= reference.reference %><br>
-    <a href="/users/<%= reference.author.id %>"><%= reference.author.full_name %></a><br>
-  <% end %>
-</div>
+    <div class="row">
+        <div class="col-md-9 col-sm-12">
+            <div class="panel panel-default profile-panel">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12 text-center">
+                            <img src="https://i1.sndcdn.com/avatars-000037150375-32dvsd-t500x500.jpg" class="img-circle user-image" style="width:100px;height:80px;">
+                        </div>
+                        <div class="col-sm-9 col-xs-12 user-info-box">
+                            <a class="btn btn-info pull-right btn-edit" href="#" data-toggle="modal" data-target="#edit-profile">
+                                <i class="fa fa-edit"></i>
+                                Edit…
+                            </a>
+                            <h1 class="user-name">Urmi Saha</h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default academic-panel">
+                <div class="panel-body">
+                    <h3>
+                        <i class="fa fa-book fa-lg"></i>
+                        About me
+                    </h3>
+                    <hr class="colorgraph">
+                    <table class="table table-hover table-responsive">
+                        <p><%= @logged_in_user.description %></p>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel panel-default projects-panel">
+                <div class="panel-body">
+                    <h3>
+                        <i class="fa fa-folder-open fa-lg"></i>
+                        My References</h3>
+                    <hr class="colorgraph">
+                    <table class="table table-hover table-responsive">
+                        <tr><% @logged_in_user.references.each do |reference| %>
+                            <%= reference.reference %><br>
+                            <a href="/users/<%= reference.author.id %>"><%= reference.author.full_name %></a><br>
+                            <% end %></tr>
+
+                    </table>
+                </div>
+            </div>
