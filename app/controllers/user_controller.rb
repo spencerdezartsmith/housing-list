@@ -24,7 +24,7 @@ post '/users' do
   @user = User.new(full_name: params[:full_name], email: params[:email], password: params[:password], description: params[:description], phone_number: params[:phone_number])
   if @user.save
     session[:user_id] = @user.id
-    redirect '/'
+    redirect '/listings'
   else
     @error = "Something went wrong. Please try again"
     erb :'/users/new'
