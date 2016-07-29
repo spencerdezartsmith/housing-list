@@ -6,6 +6,7 @@ class CreateUserTable < ActiveRecord::Migration
       t.string :password_digest
       t.string :phone_number
       t.text :description, presence: true
+      t.string :phone_number, presence: true
 
       t.timestamps null: false
     end

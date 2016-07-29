@@ -7,7 +7,7 @@ end
 post '/send_messages' do
   # send_message
   @recipient = User.find_by(full_name: params[:recipient])
-  p @recipient.phone_number
+  # p @recipient.phone_number
   # @message = Message.new(body: params[:body], recipient_id: @recipient.id, sender_id: session[:user_id])
   account_sid = ENV['ACCOUNT_SID']
   auth_token = ENV['AUTH_TOKEN']
