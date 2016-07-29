@@ -1,3 +1,15 @@
 <div class="container">
-  
+  <h1>Inbox</h1><br>
+    <ul class="list-group">
+        <% @user.messages.each do |message| %>
+        <li class="list-group-item">
+            <h5>Sent message:
+            </h5><%= message.body %>
+              <% if message.response %>
+                <h5>Reply:
+                </h5><%= message.response %>
+              <% end %>
+            <% end %>
+        </li>
+    </ul>
 </div>
