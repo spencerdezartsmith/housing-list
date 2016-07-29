@@ -4,6 +4,12 @@ get '/messages/new/:id' do
   erb :'/messages/new'
 end
 
+get '/messages' do
+  @user = current_user
+
+  erb :'/messages/index'
+end
+
 post '/messages' do
   @recipient = User.find_by(full_name: params[:recipient])
   @message = Message.create(body: params[:body], recipient_id: @recipient.id, sender_id: session[:user_id])
@@ -17,16 +23,11 @@ post '/messages' do
     :to => @recipient.phone_number,
     :body => params[:body],
   })
-  redirect '/messages/show'
+  redirect '/messages'
 end
 
 post '/response' do
   @sender = User.find_by(phone_number: params['From'])
   @message = Message.find_by(sender_id: @sender.id).update_attributes(response: params['Body'])
-end
-
-get '/messages/show' do
-  @user = current_user
-
-  erb :'/messages/show'
+  redirect '/messages'
 end

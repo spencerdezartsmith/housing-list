@@ -1,55 +1,28 @@
-<br>
-<div class="col-lg-offset-5 col-lg-2 text-center">
-      <form action="/users" method="POST">
-        <fieldset class="form-group">
-            <label for="exampleInputFullName1">Full name</label>
-            <input type="text" class="form-control" id="exampleInputFullName1" name="full_name" placeholder="Enter full name">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleTextarea">Tell us a little about yourself..</label>
-            <textarea class="form-control" id="exampleTextarea" name="description" rows="5"></textarea>
-        </fieldset>
-        <h1>Upload Image</h1>
-
-        <form action="http://itp.nyu.edu/~rsm347/sinatra/file_upload/save_image" method="POST" enctype="multipart/form-data">
-            <input type="file" name="file">
-            <input type="submit" value="Upload image">
-        </form>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-
-    <% if @error %>
+<div class="container">
+  <% if @error %>
     <h5><%= @error %></h5>
-    <% end %>
-    <form action="/users" method="POST">
-        <fieldset class="form-group">
-            <label for="exampleInputFullName1">Full name</label>
-            <input type="text" class="form-control" id="exampleInputFullName1" name="full_name">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" name="email">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleInputPhone1">Phone number</label>
-            <input type="text" class="form-control" id="exampleInputPhone1" name="phone_number">
-        </fieldset>
-        <fieldset class="form-group">
-            <label for="exampleTextarea">Tell us a little about yourself..</label>
-            <textarea class="form-control" id="exampleTextarea" name="description" rows="5"></textarea>
-        </fieldset>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+  <% end %>
+  <form action="/users" method="POST">
+      <fieldset class="form-group">
+          <label for="exampleInputFullName1">Full name</label>
+          <input type="text" class="form-control" id="exampleInputFullName1" name="full_name">
+      </fieldset>
+      <fieldset class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" name="email">
+      </fieldset>
+      <fieldset class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name="password">
+      </fieldset>
+      <fieldset class="form-group">
+          <label for="exampleInputPhone1">Phone number</label>
+          <input type="text" class="form-control" name="phone_number">
+      </fieldset>
+      <fieldset class="form-group">
+          <label for="exampleTextarea">Tell us a little about yourself..</label>
+          <textarea class="form-control" id="exampleTextarea" name="description" rows="5"></textarea>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+  </form>
 </div>

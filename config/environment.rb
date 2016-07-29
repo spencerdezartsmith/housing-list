@@ -9,8 +9,8 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 # No need for Dotenv in production
-# require 'dotenv'
-# Dotenv.load
+require 'dotenv'
+Dotenv.load
 
 require 'rubygems'
 require 'twilio-ruby'
