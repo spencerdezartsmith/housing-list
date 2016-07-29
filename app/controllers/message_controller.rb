@@ -5,10 +5,8 @@ get '/messages/new/:id' do
 end
 
 post '/messages' do
-  # send_message
   @recipient = User.find_by(full_name: params[:recipient])
-  # p @recipient.phone_number
-  # @message = Message.new(body: params[:body], recipient_id: @recipient.id, sender_id: session[:user_id])
+  @message = Message.create(body: params[:body], recipient_id: @recipient.id, sender_id: session[:user_id])
   account_sid = ENV['ACCOUNT_SID']
   auth_token = ENV['AUTH_TOKEN']
 
@@ -19,5 +17,16 @@ post '/messages' do
     :to => @recipient.phone_number,
     :body => params[:body],
   })
-  redirect '/listings'
+  redirect '/messages/show'
+end
+
+post '/response' do
+  @sender = User.find_by(phone_number: params['From'])
+  @message = Message.find_by(sender_id: @sender.id).update_attributes(response: params['Body'])
+end
+
+get '/messages/show' do
+  @user = current_user
+
+  erb :'/messages/show'
 end

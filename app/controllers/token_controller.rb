@@ -1,5 +1,5 @@
 get '/token' do
-  @logged_in_user = User.find(session[:user_id])
+  @logged_in_user = current_user
   @token = @logged_in_user.tokens.last
   erb :'tokens/index'
 end

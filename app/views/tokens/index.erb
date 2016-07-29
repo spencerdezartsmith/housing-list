@@ -1,17 +1,20 @@
 <div class="container">
 
-<br>
+    <br>
+    <p>Juanita's Housing List is a resource for the LGBTQI community trying to remain in San Francisco.</p>
+    <p>
+        If you know someone who would benefit from the resources offered on this site, click the 'generate token' button below. Please copy the token and provide it to your friend.
+    </p>
+    <p>
+        When the person registers for the site they will be required to enter the token.
+    </p>
+    <br>
+    <form action="/token/new" method="POST">
+        <input type="submit" value="Generate Token!">
+    </form><br>
 
-<p>Juanita's Housing List is a resource for the LGBTQI community trying to remain in San Francisco.</p>
-<p>
-  If you know someone who would benefit from the resources offered on this site, click the 'generate token' button below. Please copy the token and provide it to your friend.
-</p>
-<p>
-  When the person registers for the site they will be required to enter the token.
-</p>
-<br>
-<form action="/token/new" method="POST">
-	<input type="submit" value="Generate Token!">
-</form><br>
+    <% if @token %>
+    <h1><%= @token.code %></h1>
+    <% end %>
 </div>
 <!-- potentially getting the token button to change  -->
