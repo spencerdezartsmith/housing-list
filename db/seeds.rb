@@ -9,7 +9,3 @@ end
 6.times do |x|
   Reference.create(receiver_id: rand(1..4), author_id: rand(1..4), reference: Faker::Lorem.paragraph)
 end
-
-6.times do |x|
-  Response.create(listing_id: rand(1..4), author_id: rand(1..4), response: Faker::Lorem.paragraph)
-end
