@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_many :responses, foreign_key: :author_id
   has_many :references, foreign_key: :receiver_id
   has_many :tokens, foreign_key: :generator_id
+  has_many :messages, foreign_key: :sender_id
+
 
   include BCrypt
 
