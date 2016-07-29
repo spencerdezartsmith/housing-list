@@ -4,6 +4,7 @@ class CreateMessages < ActiveRecord::Migration
       t.integer :sender_id
       t.integer :recipient_id
       t.text :body
+      t.text :response
 
       t.timestamps null: false
     end

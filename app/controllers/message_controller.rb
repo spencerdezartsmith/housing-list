@@ -4,7 +4,7 @@ get '/messages/new/:id' do
   erb :'/messages/new'
 end
 
-post '/messages' do
+post '/send_messages' do
   # send_message
   @recipient = User.find_by(full_name: params[:recipient])
   p @recipient.phone_number
