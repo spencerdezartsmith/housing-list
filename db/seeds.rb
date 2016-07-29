@@ -1,5 +1,5 @@
 4.times do |x|
-  User.create(full_name: Faker::Name.name, email: Faker::Internet.email, password: '123', description: Faker::Lorem.paragraph, phone_number: '+15555555555')
+  User.create(full_name: Faker::Name.name, email: Faker::Internet.email, password: '123', description: Faker::Lorem.paragraph, phone_number: ENV['PHONE_NUMBER'])
 end
 
 4.times do |x|
