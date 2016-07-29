@@ -31,6 +31,8 @@ post '/users' do
   end
 end
 
-	put '/users/:id' do
-	  "Hello world"
-	end
+get '/users/:id/edit' do
+  @current_user = current_user
+ 'hello world'
+  # erb :
+end

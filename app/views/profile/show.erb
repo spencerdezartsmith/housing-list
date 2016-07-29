@@ -39,7 +39,10 @@
                             <%= reference.reference %><br>
                             <a href="/users/<%= reference.author.id %>"><%= reference.author.full_name %></a><br>
                             <% end %></tr>
-
                     </table>
+                    <form method="get" action="/users/<%= @logged_in_user.id %>/edit">
+                      <button type="submit" class="btn btn-info" value='put'>Edit</button>
+                   </form>
                 </div>
             </div>
+</div>
