@@ -30,3 +30,7 @@ post '/users' do
     erb :'/users/new'
   end
 end
+
+	put '/users/:id' do
+	  "Hello world"
+	end
