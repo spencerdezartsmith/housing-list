@@ -1,8 +1,8 @@
-Housing List
+
 
 This was a passion project created during phase two at Dev Bootcamp. It was a CRUD app following restful routing built in Ruby, Sinatra and is hosted on Heroku. 
 
-This webapp was built to be a privat housing list for small communities to share housing amoung themselves in order to combat gentrification.
+This webapp was built to be a private housing list for small communities to share housing amoung themselves in order to combat gentrification.
 
 It implements an invite only token system. 
 
