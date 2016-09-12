@@ -14,7 +14,7 @@ The receiver is able to respond to the text message and have it appear in an in 
 The user is able to see where the listing address is located on a built in map. 
 A user is able to generate a special token to allow a friend to sign up for the service. 
 
-https://dashboard.heroku.com/apps/housing-list
+https://housing-list.herokuapp.com/
 
 login: spencer.dezart.smith@gmail.com
 password: 123
