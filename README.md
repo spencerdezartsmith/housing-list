@@ -1,30 +1,22 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+HOUSING LIST
 
-### Purpose
-The Sinatra Skeleton:
+This was a passion project created during phase two at Dev Bootcamp. It was a CRUD app following restful routing built in Ruby, Sinatra and is hosted on Heroku. 
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+This webapp was built to be a private housing list for small communities to share housing amoung themselves in order to combat gentrification.
 
-### Quickstart
+It implements an invite only token system. 
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+It used both the Google Maps and Twillio API's.
 
-As needed, create models & migrations with the `rake` tasks:
+A user is able to post, edit, delete, read a housing listing. 
+A user is able to contact the owner of the post through text message. 
+The receiver is able to respond to the text message and have it appear in an in app inbox. 
+The user is able to see where the listing address is located on a built in map. 
+A user is able to generate a special token to allow a friend to sign up for the service. 
 
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+https://housing-list.herokuapp.com/
 
-### Contributing
+login: spencer.dezart.smith@gmail.com
+password: 123
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
 
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
