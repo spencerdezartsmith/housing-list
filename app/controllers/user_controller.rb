@@ -1,4 +1,4 @@
-# get code and check if it exists. if so show registration form. if not redirect
+
 get '/users/new' do
   if token_check(params[:code])
     token_check(params[:code]).destroy
@@ -34,5 +34,5 @@ end
 get '/users/:id/edit' do
   @current_user = current_user
  'hello world'
-  # erb :
+
 end
