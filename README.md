@@ -16,7 +16,12 @@ A user is able to generate a special token to allow a friend to sign up for the 
 
 https://housing-list.herokuapp.com/
 
-login: spencer.dezart.smith@gmail.com
+login: test@test.com
 password: 123
 
+Also use the following access token to sign up. 
+
+## 54319ac3
+
+When you fill out your profile, add you're real phone number. When you add a listing you can select it and choose `send message`. Leave the name as is, fill in a message and hit send. This will send a message to you're phone via Twilio.
 
